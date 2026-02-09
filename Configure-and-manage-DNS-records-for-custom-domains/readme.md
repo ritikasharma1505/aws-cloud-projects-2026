@@ -1,6 +1,6 @@
-Route 53 DNS Management – Configure and manage DNS records for custom domains.
+## Route 53 DNS Management – Configure and manage DNS records for custom domains.
 
-Amazon Route 53 is a scalable and highly available Domain Name System (DNS) web service. It helps route end users to applications by translating domain names(e.g., example.com) into IP addresses. In this project, we will configure and manage DNS records for a custom domain using Route 53.
+### Amazon Route 53 is a scalable and highly available Domain Name System (DNS) web service. It helps route end users to applications by translating domain names(e.g., example.com) into IP addresses. In this project, we will configure and manage DNS records for a custom domain using Route 53.
 
 ![alt text](demo-images-0902/whatisasubdomain_module2_infographic.avif)
 
