@@ -15,11 +15,11 @@ In this project, we will deploy a web server using Amazon EC2. We will launch an
    ○ Security Group: Allow SSH (port 22) and HTTP (port 80).
 4. Click Launch
 
-![alt text](ec2-instance-setup-part-1.png)
+![alt text](demo-images-0502/ec2-instance-setup-part-1.png)
 
-![alt text](ec2-instance-setup-part-2.png)
+![alt text](demo-images-0502/ec2-instance-setup-part-2.png)
 
-![alt text](ec2-instance-setup-part-3.png)
+![alt text](demo-images-0502/ec2-instance-setup-part-3.png)
 
 ### Step 2: Connect to the EC2 Instance
 Open a terminal and run:
@@ -81,7 +81,7 @@ Open a browser and go to:
 
   ```
 
-![alt text](nginx-installed-view-on-browser.png)  
+![alt text](demo-images-0502/nginx-installed-view-on-browser.png)
 
 You should see "Welcome to My Web Server, installed Nginx !!"
 
