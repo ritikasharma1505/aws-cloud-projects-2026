@@ -9,11 +9,11 @@
 1. Go to AWS Console -> EC2 -> Launch Templates → Create Launch Template.
 
 2. Configure:
-○ Name: WebAppTemplate
-○ AMI: Amazon Linux 2 or Ubuntu
-○ Instance Type: t2.micro (Free Tier) or t3.medium
-○ Key Pair: Select an existing key pair or create a new one.
-○ Security Group: Allow SSH (22), HTTP (80), and HTTPS (443).
+- Name: WebAppTemplate
+- AMI: Amazon Linux 2 or Ubuntu
+- Instance Type: t2.micro (Free Tier) or t3.medium
+- Key Pair: Select an existing key pair or create a new one.
+- Security Group: Allow SSH (22), HTTP (80), and HTTPS (443).
 
 
 ![alt text](demo-images-1602/launch-template-example-part1.png)
@@ -48,30 +48,30 @@ echo "<h1>Welcome to Scalable Web App</h1>" | sudo tee /var/www/html/index.html
 
 
 3. Attach New Load Balancer:
-○ Choose Application Load Balancer (ALB).
-○ Create Target Group:
-■ Target Type: Instance
-■ Protocol: HTTP
-■ Health Check: /
-○ Register instances later (Auto Scaling will handle this).
+- Choose Application Load Balancer (ALB).
+- Create Target Group:
+- Target Type: Instance
+- Protocol: HTTP
+- Health Check: /
+- Register instances later (Auto Scaling will handle this).
 
 ![alt text](demo-images-1602/asg-attach-new-alb-part3.png)
 
 4. Configure Group Size:
-○ Desired Capacity: 2
-○ Minimum Instances: 1
-○ Maximum Instances: 3
+- Desired Capacity: 2
+- Minimum Instances: 1
+- Maximum Instances: 3
 
 5. Select Network:
-○ Choose an existing VPC.
-○ Select at least two subnets across different Availability Zones (AZs).
+- Choose an existing VPC.
+- Select at least two subnets across different Availability Zones (AZs).
 
 ![alt text](demo-images-1602/asg-part4.png)
 
 
 6. Set Scaling Policies (Optional):
-○ Enable Auto Scaling based on CPU utilization.
-○ Example Policy: Scale out when CPU > 60%, Scale in when CPU < 40%.
+- Enable Auto Scaling based on CPU utilization.
+- Example Policy: Scale out when CPU > 60%, Scale in when CPU < 40%.
 
 ![alt text](demo-images-1602/review-asg-creation.png)
 
@@ -84,22 +84,22 @@ echo "<h1>Welcome to Scalable Web App</h1>" | sudo tee /var/www/html/index.html
 2. Select Application Load Balancer.
 
 3. Configure Basic Settings:
-○ Name: WebAppALB
-○ Scheme: Internet-facing
-○ VPC: Select the same VPC as Auto Scaling.
-○ Availability Zones: Choose at least 2.
+- Name: WebApp-alb
+- Scheme: Internet-facing
+- VPC: Select the same VPC as Auto Scaling.
+- Availability Zones: Choose at least 2.
 
 4. Configure Listeners:
-○ Protocol: HTTP
-○ Port: 80
+- Protocol: HTTP
+- Port: 80
 
 5. Target Group:
-○ Select existing Target Group (from Auto Scaling Group).
+- Select existing Target Group (from Auto Scaling Group).
 
 ![alt text](demo-images-1602/tg-grp.png)
 
 6. Security Group:
-○ Allow HTTP (80).
+- Allow HTTP (80).
 
 7. Click Create Load Balancer.
 
@@ -108,7 +108,7 @@ echo "<h1>Welcome to Scalable Web App</h1>" | sudo tee /var/www/html/index.html
 ### Step 4: Test the Setup
 
 1. Get ALB DNS Name:
-○ Go to EC2 -> Load Balancers -> Copy the ALB DNS Name.
+- Go to EC2 -> Load Balancers -> Copy the ALB DNS Name.
 
 Open a browser and enter:
 
@@ -124,7 +124,7 @@ Welcome to Scalable Web App
 
 1. Stop an Instance:
 
-○ Manually stop an instance to verify if Auto Scaling replaces it.
+- Manually stop an instance to verify if Auto Scaling replaces it.
 
 ![alt text](demo-images-1602/terminate-ec2-manually-to-verify-asg-creates-new.png)
 
