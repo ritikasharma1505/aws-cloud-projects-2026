@@ -53,9 +53,12 @@ Verify installation:
   ```
   sudo systemctl status nginx
   
-
-  sudo nginx -T | grep -A5 root                    # It told us where nginx serves files from and which index files have priority
-  sudo rm /var/www/html/index.nginx-debian.html    # Remove Ubuntu’s default nginx welcome page
+  # It told us where nginx serves files from and which index file have priority
+  sudo nginx -T | grep -A5 root              
+  
+  # Remove Ubuntu’s default nginx welcome page
+  sudo rm /var/www/html/index.nginx-debian.html    
+  
   ```
 
 ### Step 4: Deploy a Web Page  
